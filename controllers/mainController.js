@@ -13,6 +13,7 @@ exports.create = (req, res) => {
     }
 
     try {
+
         const item = service.create({
             title: title.trim(),
             secret: secret.trim()
