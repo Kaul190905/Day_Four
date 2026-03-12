@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Hackathon App</title>
-<link rel="stylesheet" href="style.css">
+    <title>SecureVault</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<h1>Hackathon Debug App</h1>
-
-<input id="title" placeholder="title">
-<input id="secret" placeholder="secret">
-
-<button onclick="create()">Create</button>
-
-<div id="list"></div>
-
-<script src="app.js"></script>
-
+    <h1>SecureVault</h1>
+    <div class="input-container">
+        <input id="title" placeholder="Service Name (e.g. Gmail)">
+        <input id="secret" placeholder="Secret / Password">
+        <button onclick="create()">Protect Secret</button>
+    </div>
+    <hr>
+    <div id="list"></div>
+    <script src="app.js"></script>
 </body>
 </html>
