@@ -19,6 +19,7 @@ exports.create = (req, res) => {
         })
         return res.status(201).json(item)
     } catch (err) {
+        console.error("Create Entry Error:", err)
         return res.status(500).json({ error: "Failed to create entry" })
     }
 }

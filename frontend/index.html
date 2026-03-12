@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Hackathon App</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>SecureVault | Encrypted Manager</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <h1>SecureVault</h1>
 
-<h1>Hackathon Debug App</h1>
+        <div class="controls">
+            <input id="title" placeholder="Service Name">
+            <input id="secret" type="password" placeholder="Password / Secret">
+            <button onclick="create()">Protect Secret</button>
+        </div>
 
-<input id="title" placeholder="title">
-<input id="secret" placeholder="secret">
+        <div id="list"></div>
+    </div>
 
-<button onclick="create()">Create</button>
-
-<div id="list"></div>
-
-<script src="app.js"></script>
-
+    <script src="app.js"></script>
 </body>
 </html>
