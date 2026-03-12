@@ -1,23 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>SecureVault | Encrypted Manager</title>
+    <title>SecureVault</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>SecureVault</h1>
-
-        <div class="controls">
-            <input id="title" placeholder="Service Name">
-            <input id="secret" type="password" placeholder="Password / Secret">
-            <button onclick="create()">Protect Secret</button>
-        </div>
-
-        <div id="list"></div>
+    <h1>SecureVault</h1>
+    <div class="input-container">
+        <input id="title" placeholder="Service Name (e.g. Gmail)">
+        <input id="secret" placeholder="Secret / Password">
+        <button onclick="create()">Protect Secret</button>
     </div>
-
+    <hr>
+    <div id="list"></div>
     <script src="app.js"></script>
 </body>
 </html>
