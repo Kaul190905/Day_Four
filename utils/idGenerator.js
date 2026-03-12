@@ -1,5 +1,5 @@
-module.exports=function(list){
+const crypto = require("crypto")
 
-return list.length+1
-
+module.exports=function(){
+    return crypto.randomUUID()
 }

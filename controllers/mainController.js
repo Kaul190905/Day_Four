@@ -1,16 +1,34 @@
 const service=require("../services/mainService")
 
 exports.create=(req,res)=>{
-const item=service.create(req.body)
-res.json(item)
+    const { title, secret } = req.body
+    
+    if (!title || !secret) {
+        return res.status(400).json({ error: "Title and Secret are required" })
+    }
+    
+    try {
+        const item=service.create(req.body)
+        res.status(201).json(item)
+    } catch (err) {
+        res.status(500).json({ error: "Failed to create entry" })
+    }
 }
 
 exports.list=(req,res)=>{
-const data=service.list()
-res.json(data)
+    try {
+        const data=service.list()
+        res.json(data)
+    } catch (err) {
+        res.status(500).json({ error: "Failed to list entries" })
+    }
 }
 
 exports.remove=(req,res)=>{
-service.remove(req.params.id)
-res.json({message:"deleted"})
+    try {
+        service.remove(req.params.id)
+        res.json({message:"deleted"})
+    } catch (err) {
+        res.status(500).json({ error: "Failed to delete entry" })
+    }
 }

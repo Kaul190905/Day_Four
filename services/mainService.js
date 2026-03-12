@@ -9,7 +9,7 @@ exports.create=function(data){
 const list=readData(FILE)
 
 const item={
-id:idGen(list),
+id:idGen(),
 title:data.title,
 secret:cryptoService.encrypt(data.secret)
 }
@@ -23,7 +23,8 @@ return item
 }
 
 exports.list=function(){
-return readData(FILE)
+const list = readData(FILE)
+return list
 }
 
 exports.remove=function(id){
