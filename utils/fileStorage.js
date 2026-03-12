@@ -2,7 +2,7 @@ const fs=require("fs")
 
 exports.readData=function(path){
     if (!fs.existsSync(path)) return []
-    const raw=fs.readFileSync(path)
+    const raw=fs.readFileSync(path,"utf8")
     return JSON.parse(raw)
 }
 

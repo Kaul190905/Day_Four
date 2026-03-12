@@ -9,4 +9,7 @@ router.delete("/:id",controller.remove)
 router.put("/:id",controller.update)
 router.patch("/:id",controller.modify)
 
+router.put("/:id",controller.update)
+router.patch("/:id",controller.modify)
+
 module.exports=router

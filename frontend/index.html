@@ -1,19 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Hackathon App</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hackathon Debug App</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>Hackathon Debug App</h1>
+<div class="container">
 
-<input id="title" placeholder="title">
-<input id="secret" placeholder="secret">
+<h1> Hackathon Debug App</h1>
 
-<button onclick="create()">Create</button>
+<div class="form-box">
 
+<label>Title</label>
+<input id="title" type="text" placeholder="Enter title">
+
+<label>Secret</label>
+<input id="secret" type="text" placeholder="Enter secret">
+
+<button onclick="create()">Create Secret</button>
+
+</div>
+
+<div class="list-box">
+<h2>Saved Secrets</h2>
 <div id="list"></div>
+</div>
+
+</div>
 
 <script src="app.js"></script>
 
