@@ -32,3 +32,10 @@ exports.remove=(req,res)=>{
         res.status(500).json({ error: "Failed to delete entry" })
     }
 }
+exports.update=function(req,res){
+res.send("PUT working")
+}
+
+exports.modify=function(req,res){
+res.send("PATCH working")
+}
