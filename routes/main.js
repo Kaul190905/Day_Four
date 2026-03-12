@@ -1,9 +1,16 @@
-const express=require("express")
-const router=express.Router()
-const controller=require("../controllers/mainController")
+const express = require("express")
+const router = express.Router()
 
-router.post("/create",controller.create)
-router.get("/list",controller.list)
-router.delete("/:id",controller.remove)
+const controller = require("../controllers/mainController")
 
-module.exports=router
+router.post("/create", controller.create)
+router.get("/list", controller.list)
+router.delete("/:id", controller.remove)
+
+router.put("/:id", controller.update)     // PUT
+router.patch("/:id", controller.patch)   // PATCH
+
+module.exports = router
+
+//
+

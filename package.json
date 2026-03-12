@@ -1,5 +1,24 @@
 {
   "dependencies": {
-    "dotenv": "^17.3.1"
-  }
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1"
+  },
+  "name": "day_four",
+  "version": "1.0.0",
+  "description": "Encrypted Password Vault is a backend-driven system that allows users to store credentials for various services.",
+  "main": "test_vault.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaul190905/Day_Four.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaul190905/Day_Four/issues"
+  },
+  "homepage": "https://github.com/Kaul190905/Day_Four#readme"
 }

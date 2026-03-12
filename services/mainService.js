@@ -1,38 +1,29 @@
-const {readData,writeData}=require("../utils/fileStorage")
-const idGen=require("../utils/idGenerator")
-const cryptoService=require("./cryptoService")
+exports.update = function(id,data){
 
-const FILE="data/data.json"
+let list = storage.read()
 
-exports.create=function(data){
+const index = list.findIndex(i=>i.id == id)
 
-const list=readData(FILE)
+list[index] = { id, ...data }
 
-const item={
-id:idGen(),
-title:data.title,
-secret:cryptoService.encrypt(data.secret)
-}
+storage.write(list)
 
-list.push(item)
-
-writeData(FILE,list)
-
-return item
+return list[index]
 
 }
 
-exports.list=function(){
-const list = readData(FILE)
-return list
-}
+//PATCH
 
-exports.remove=function(id){
+exports.update = function(id,data){
 
-const list=readData(FILE)
+let list = storage.read()
 
-const newList=list.filter(i=>i.id!=id)
+const index = list.findIndex(i=>i.id == id)
 
-writeData(FILE,newList)
+list[index] = { id, ...data }
+
+storage.write(list)
+
+return list[index]
 
 }
